@@ -1,0 +1,186 @@
+/* Simple Crafts UI Design System */
+
+:root {
+  /* Canvas & Surfaces (Light Sand) */
+  --bg-canvas: #EBE3D3;
+  --bg-surface: #FAF7F2;
+  --bg-surface-hover: #F0EBE1;
+  --border-subtle: #E6DFD3;
+  --border-strong: #D6C8B0;
+
+  /* Typography */
+  --text-primary: #1F1C18;
+  --text-secondary: #6E665E;
+  --text-inverse: #F5F0E6;
+
+  /* Accent: Sage (Idle / Medium Priority) */
+  --sage-text: #2D5A43;
+  --sage-bg: #E6EFEA;
+  --sage-border: #9CBBAA;
+
+  /* Accent: Terracotta (High Priority / Danger) */
+  --terracotta-text: #B05338;
+  --terracotta-bg: #F8EFEA;
+  --terracotta-border: #DFA998;
+
+  /* Accent: Ochre (Printing / Warning) */
+  --ochre-text: #8C6228;
+  --ochre-bg: #F2E7D5;
+  --ochre-border: #CBB494;
+
+  /* Accent: Taupe (None / Offline) */
+  --taupe-text: #6E665E;
+  --taupe-bg: #E6DFD3;
+  --taupe-border: #B8B0A5;
+}
+
+/* Espresso Dark Mode */
+.dark, [data-theme="dark"] {
+  /* Canvas & Surfaces (Deep Espresso) */
+  --bg-canvas: #141210;
+  --bg-surface: #1F1C18;
+  --bg-surface-hover: #26221D;
+  --border-subtle: rgba(235, 227, 211, 0.08);
+  --border-strong: rgba(235, 227, 211, 0.16);
+
+  /* Typography */
+  --text-primary: #F5F0E6;
+  --text-secondary: #A89F91;
+  --text-inverse: #1F1C18;
+
+  /* Accent: Sage (Idle / Medium Priority) */
+  --sage-text: #5C9E7B;
+  --sage-bg: #1E2D25;
+  --sage-border: #3A5B47;
+
+  /* Accent: Terracotta (High Priority / Danger) */
+  --terracotta-text: #E07A5F;
+  --terracotta-bg: #35201A;
+  --terracotta-border: #6B4034;
+
+  /* Accent: Ochre (Printing / Warning) */
+  --ochre-text: #D9A05B;
+  --ochre-bg: #3A2A18;
+  --ochre-border: #6E502F;
+
+  /* Accent: Taupe (None / Offline) */
+  --taupe-text: #A89F91;
+  --taupe-bg: #2B2723;
+  --taupe-border: #524B43;
+}
+
+/* =========================================
+   Component Utility Classes
+   ========================================= */
+
+/* Layout */
+.layout-canvas {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.sidebar-nav {
+  background-color: var(--bg-surface);
+  border-right: 1px solid var(--border-subtle);
+}
+
+/* Surfaces & Cards */
+.ui-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(20, 18, 16, 0.05);
+}
+
+/* Accordions */
+.accordion-header {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+/* Typography */
+.text-heading {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.text-muted {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Interactive Elements */
+.btn-primary {
+  background-color: var(--text-primary);
+  color: var(--text-inverse);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Status Badges (Pills) */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.badge-idle, 
+.badge-completed {
+  background-color: var(--sage-bg);
+  color: var(--sage-text);
+  border-color: var(--sage-border);
+}
+
+.badge-high-priority {
+  background-color: var(--terracotta-bg);
+  color: var(--terracotta-text);
+  border-color: var(--terracotta-border);
+}
+
+.badge-printing {
+  background-color: var(--ochre-bg);
+  color: var(--ochre-text);
+  border-color: var(--ochre-border);
+}
+
+.badge-offline {
+  background-color: var(--taupe-bg);
+  color: var(--taupe-text);
+  border-color: var(--taupe-border);
+}
+
+/* Data Tables */
+.table-row {
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: transparent;
+}
+
+.table-row:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+.table-cell-link {
+  color: var(--sage-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

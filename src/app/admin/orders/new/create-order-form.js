@@ -138,7 +138,7 @@ export default function CreateOrderForm({materials = []}) {
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
                   placeholder="e.g. Juan dela Cruz"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm text-gray-900 bg-white"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-terracotta-border focus:outline-none text-sm text-gray-900 bg-white"
                 />
               </div>
 
@@ -152,7 +152,7 @@ export default function CreateOrderForm({materials = []}) {
                   value={customerContact}
                   onChange={(e) => setCustomerContact(e.target.value)}
                   placeholder="e.g. 09171234567 / @juandelacruz"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm text-gray-900 bg-white"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-terracotta-border focus:outline-none text-sm text-gray-900 bg-white"
                 />
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function CreateOrderForm({materials = []}) {
               <button
                 type="button"
                 onClick={handleAddItem}
-                className="flex items-center text-xs font-semibold text-blue-600 hover:text-blue-700 bg-blue-100 hover:bg-blue-200 px-3 py-1.5 rounded-md transition-colors"
+                className="flex items-center text-xs font-semibold text-on-brand-secondary bg-brand-secondary hover:bg-brand-secondary-hover px-3 py-1.5 rounded-md transition-colors"
               >
                 <PlusIcon className="w-4 h-4 mr-1" />
                 Add Item Row
@@ -189,7 +189,7 @@ export default function CreateOrderForm({materials = []}) {
                       placeholder={`Item #${index + 1} Name`}
                       value={item.itemName}
                       onChange={(e) => handleItemChange(item.id, 'itemName', e.target.value)}
-                      className="w-full px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900"
+                      className="w-full px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-terracotta-border focus:outline-none text-gray-900"
                     />
                   </div>
 
@@ -199,7 +199,7 @@ export default function CreateOrderForm({materials = []}) {
                     <select
                       value={item.material}
                       onChange={(e) => handleItemChange(item.id, 'material', e.target.value)}
-                      className="w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 bg-white"
+                      className="w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-terracotta-border focus:outline-none text-gray-900 bg-white"
                     >
                       {materials.map((mat) => (
                         <option key={mat.id} value={mat.name}>
@@ -217,7 +217,7 @@ export default function CreateOrderForm({materials = []}) {
                       min="1"
                       value={item.qty}
                       onChange={(e) => handleItemChange(item.id, 'qty', e.target.value)}
-                      className="w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 text-center"
+                      className="w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-terracotta-border focus:outline-none text-gray-900 text-center"
                     />
                   </div>
 
@@ -231,7 +231,7 @@ export default function CreateOrderForm({materials = []}) {
                       placeholder="₱ Price"
                       value={item.price}
                       onChange={(e) => handleItemChange(item.id, 'price', e.target.value)}
-                      className="w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 text-right"
+                      className="w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-terracotta-border focus:outline-none text-gray-900 text-right"
                     />
                   </div>
 
@@ -261,7 +261,7 @@ export default function CreateOrderForm({materials = []}) {
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="Infill %, layer height, post-processing notes, target delivery date, etc."
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm text-gray-900 bg-white"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-terracotta-border focus:outline-none text-sm text-gray-900 bg-white"
               />
             </div>
 
@@ -269,7 +269,7 @@ export default function CreateOrderForm({materials = []}) {
               <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider block">
                 Total Order Cost
               </span>
-              <div className="text-2xl font-bold text-blue-600">
+              <div className="text-2xl font-bold text-on-surface-emph">
                 ₱{calculateTotal().toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </div>
             </div>
@@ -287,7 +287,7 @@ export default function CreateOrderForm({materials = []}) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-6 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 transition-colors"
+              className="px-6 py-2 text-sm font-medium text-white bg-brand-primary rounded-md hover:bg-brand-primary-hover disabled:opacity-50 transition-colors"
             >
               {isSubmitting ? 'Saving Order...' : 'Create Order'}
             </button>

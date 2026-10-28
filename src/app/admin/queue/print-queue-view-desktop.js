@@ -60,7 +60,7 @@ export default function PrintQueueView({printQueue = []}) {
                     <td className="px-4 py-3 whitespace-nowrap text-gray-700 font-medium">
                       {job.printer}
                     </td>
-                    <td className="px-4 py-3 whitespace-nowrap text-blue-600 font-medium">
+                    <td className="px-4 py-3 whitespace-nowrap text-on-surface-link font-medium">
                       {job.orderId}
                     </td>
                     <td className="px-4 py-3 whitespace-nowrap">

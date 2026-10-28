@@ -11,7 +11,7 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
   return (
     <div className="flex flex-col h-full">
       <div className="p-6 border-b border-gray-700 shrink-0">
-        <h2 className="text-xl font-bold text-blue-400">Simpl3 Prints</h2>
+        <h2 className="text-xl font-bold text-on-brand-primary">SC: P&M Admin Portal</h2>
       </div>
 
       <nav className="flex-1 flex flex-col p-4 gap-2 overflow-y-auto">
@@ -78,7 +78,7 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                         href={sub.href}
                         className={`px-3 py-2 rounded-md text-sm transition-colors ${
                           isSubActive
-                            ? 'bg-gray-700 text-blue-400 font-semibold'
+                            ? 'bg-brand-secondary text-on-brand-secondary font-semibold'
                             : 'text-gray-400 hover:text-white hover:bg-gray-700'
                         }`}
                       >

@@ -13,11 +13,11 @@ export default async function DashboardPage() {
       <h1 className="text-2xl font-bold text-green-600 mb-4">
         Login Successful! 🎉
       </h1>
-      <p className="text-gray-600 mb-2">
+      <p className="text-on-surface-primary mb-2">
         Welcome, <strong>{session?.user?.name}</strong>!
       </p>
       <p className="text-sm text-gray-500 mb-6">
-        Your role: <span className="font-semibold text-blue-600">{session?.user?.role || 'Undefined'}</span>
+        Your role: <span className="font-semibold text-on-surface-emph">{session?.user?.role || 'Undefined'}</span>
       </p>
     </div>
   );

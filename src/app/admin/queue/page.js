@@ -1,5 +1,5 @@
 import { getPrinters, getPrintQueue } from '@/data-service';
-import PrintQueueView from './print-queue-view';
+import PrintQueueView from './print-queue-view-desktop';
 import PrinterListView from './printer-list-view';
 
 export const metadata = {

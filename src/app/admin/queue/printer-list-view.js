@@ -24,7 +24,7 @@ export default function PrinterListView({printers = []}) {
         <div className="flex items-center space-x-2">
           <h2 className="text-lg font-bold text-gray-800">Printers Status</h2>
           {/* shows how many printers are in the fleet in a text bubble */}
-          <span className="text-xs font-semibold px-2.5 py-0.5 bg-blue-100 text-blue-700 rounded-full">
+          <span className="text-xs font-semibold px-2.5 py-0.5 bg-brand-secondary text-on-brand-secondary rounded-full">
             {printers.length} Printers
           </span>
         </div>
@@ -64,7 +64,7 @@ export default function PrinterListView({printers = []}) {
                     />
                   </div>
 
-                  <h3 className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors mb-1 text-base">
+                  <h3 className="font-bold text-on-sruface-primary group-hover:text-on-brand-secondary transition-colors mb-1 text-base">
                     {printer.name}
                   </h3>
 

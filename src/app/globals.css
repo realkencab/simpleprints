@@ -1,186 +1,155 @@
-/* Simple Crafts UI Design System */
+@import "tailwindcss";
 
 :root {
-  /* Canvas & Surfaces (Light Sand) */
-  --bg-canvas: #EBE3D3;
-  --bg-surface: #FAF7F2;
-  --bg-surface-hover: #F0EBE1;
-  --border-subtle: #E6DFD3;
-  --border-strong: #D6C8B0;
+  /* Light Sand Mode */
+  color-scheme: light;
 
-  /* Typography */
-  --text-primary: #1F1C18;
-  --text-secondary: #6E665E;
-  --text-inverse: #F5F0E6;
+  /* Surface BG Colors */
+  --canvas-primary: #EBE3D3;
+  --surface-primary: #FAF7F2;
+  --surface-secondary: #FDFBF7;
 
-  /* Accent: Sage (Idle / Medium Priority) */
-  --sage-text: #2D5A43;
-  --sage-bg: #E6EFEA;
+  /* Surface Typography Colors */
+  --on-canvas: ;
+  --on-surface-primary: #1F1C18;
+  --on-surface-secondary: #6E665E;
+  --on-surface-emph: #B05338;
+  
+  --border-subtle: ;
+  --border-strong: ;
+
+
+  /* Brand BG Colors */
+  --brand-primary: #B05338;
+  --brand-primary-hover: #843e2a;
+  --brand-secondary: #E1BDB3;
+  --brand-secondary-hover: #d6a496;
+  
+  /* Brand Typography Colors */
+  --on-brand-primary: #FFFFDC;
+  --on-brand-secondary: #B05338;
+
+   /* Accent: Sage (Idle / Medium Priority) */
   --sage-border: #9CBBAA;
+  --sage-primary: #E6EFEA;
+  --sage-secondary: #2D5A43;
+  --on-sage-primary: #2D5A43;
+  --on-sage-secondary: #E6EFEA;
 
   /* Accent: Terracotta (High Priority / Danger) */
-  --terracotta-text: #B05338;
-  --terracotta-bg: #F8EFEA;
   --terracotta-border: #DFA998;
+  --terracotta-primary: #F8EFEA;
+  --terracotta-secondary: #B05338;
+  --on-terracotta-primary: #B05338;
+  --on-terracotta-secondary: #F8EFEA;
+
+  /* Accent: Azul ( / ) */
+  --azul-border: #73D4FF;
+  --azul-primary: #DFF2FE;
+  --azul-secondary: #0069A8;
+  --on-azul-primary: #0069A8;
+  --on-azul-secondary: #DFF2FE;
+
 
   /* Accent: Ochre (Printing / Warning) */
-  --ochre-text: #8C6228;
-  --ochre-bg: #F2E7D5;
   --ochre-border: #CBB494;
+  --ochre-primary: #F2E7D5;
+  --ochre-secondary: #8C6228;
+  --on-ochre-primary: #8C6228;
+  --on-ochre-secondary: #F2E7D5;
 
   /* Accent: Taupe (None / Offline) */
-  --taupe-text: #6E665E;
-  --taupe-bg: #E6DFD3;
   --taupe-border: #B8B0A5;
+  --taupe-primary: #E6DFD3;
+  --taupe-secondary: #6E665E;
+  --on-taupe-primary: #6E665E;
+  --on-taupe-secondary: #E6DFD3;
+
+/*
+  
+  --brand-surface: #FAF7F2;
+  --brand-header: #EFEAE1
+  --brand-card: #FFFFFF;
+  --brand-text: #1F1C18;
+  --brand-primary: #B05338;       
+  --brand-primary-hover: #91422B; 
+  --brand-subtle: #F8EFEA;        
+  --brand-border: #C86D51;       
+  --brand-button-text: #FAF7F2;
+
+  */
 }
 
-/* Espresso Dark Mode */
-.dark, [data-theme="dark"] {
-  /* Canvas & Surfaces (Deep Espresso) */
-  --bg-canvas: #141210;
-  --bg-surface: #1F1C18;
-  --bg-surface-hover: #26221D;
-  --border-subtle: rgba(235, 227, 211, 0.08);
-  --border-strong: rgba(235, 227, 211, 0.16);
+.dark {
+  color-scheme: dark;
 
-  /* Typography */
-  --text-primary: #F5F0E6;
-  --text-secondary: #A89F91;
-  --text-inverse: #1F1C18;
-
-  /* Accent: Sage (Idle / Medium Priority) */
-  --sage-text: #5C9E7B;
-  --sage-bg: #1E2D25;
-  --sage-border: #3A5B47;
-
-  /* Accent: Terracotta (High Priority / Danger) */
-  --terracotta-text: #E07A5F;
-  --terracotta-bg: #35201A;
-  --terracotta-border: #6B4034;
-
-  /* Accent: Ochre (Printing / Warning) */
-  --ochre-text: #D9A05B;
-  --ochre-bg: #3A2A18;
-  --ochre-border: #6E502F;
-
-  /* Accent: Taupe (None / Offline) */
-  --taupe-text: #A89F91;
-  --taupe-bg: #2B2723;
-  --taupe-border: #524B43;
+  /* Espresso Dark Mode */
+  --brand-surface: #141210;
+  --brand-card: #1F1C18;
+  --brand-text: #F5F0E6;
+  --brand-primary: #E07A5F;        /* Terracotta Dark Accent */
+  --brand-primary-hover: #E88C73;
+  --brand-subtle: #35201A;
+  --brand-border: #F2A18A;
+  --brand-button-text: #141210;
 }
 
-/* =========================================
-   Component Utility Classes
-   ========================================= */
 
-/* Layout */
-.layout-canvas {
-  background-color: var(--bg-canvas);
-  color: var(--text-primary);
-  min-height: 100vh;
+
+
+@theme {
+  --font-sans: var(--font-roboto), Arial, sans-serif;
+
+  /* Tailwind v4 CSS Theme Variables */
+  --color-surface-primary: var(--surface-secondary);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-on-surface-primary: var(--on-surface-primary);
+  --color-on-surface-secondary: var(--on-surface-primary);
+  --color-on-surface-emph: var(--on-surface-emph);
+
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-secondary-hover: var(--brand-secondary-hover);
+
+  --color-on-brand-primary: var(--on-brand-primary);
+  --color-on-brand-secondary: var(--on-brand-secondary);
+
+  --color-terracotta-primary: var(--terracotta-primary);
+  --color-terracotta-secondary: var(--terracotta-secondary);
+  --color-sage-primary: var(--sage-primary);
+  --color-sage-secondary: var(--sage-secondary);
+  --color-azul-primary: var(--azul-primary);
+  --color-azul-secondary: var(--azul-secondary);
+  --color-ochre-primary: var(--ochre-primary);
+  --color-ochre-secondary: var(--ochre-secondary);
+  --color-taupe-primary: var(--taupe-primary);
+  --color-taupe-secondary: var(--taupe-secondary);
+  
+  --color-on-terracotta-primary: var(--on-terracotta-primary);
+  --color-on-terracotta-secondary: var(--on-terracotta-secondary);
+  --color-on-sage-primary: var(--on-sage-primary);
+  --color-on-sage-secondary: var(--on-sage-secondary);
+  --color-on-azul-primary: var(--on-azul-primary);
+  --color-on-azul-secondary: var(--on-azul-secondary);
+  --color-on-ochre-primary: var(--on-ochre-primary);
+  --color-on-ochre-secondary: var(--on-ochre-secondary);
+  --color-on-taupe-primary: var(--on-taupe-primary);
+  --color-on-taupe-secondary: var(--on-taupe-secondary);
+
+  --color-terracotta-border: var(--terracotta-border);
+  --color-sage-border: var(--sage-border);
+  --color-azul-border: var(--azul-border);
+  --color-ochre-border: var(--ochre-border);
+  --color-taupe-border: var(--taupe-border);
 }
 
-.sidebar-nav {
-  background-color: var(--bg-surface);
-  border-right: 1px solid var(--border-subtle);
+html {
+  overflow-y: scroll;
 }
 
-/* Surfaces & Cards */
-.ui-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 6px -1px rgba(20, 18, 16, 0.05);
-}
-
-/* Accordions */
-.accordion-header {
-  background-color: var(--bg-surface);
-  color: var(--text-primary);
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 1rem 1.25rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.accordion-header:hover {
-  background-color: var(--bg-surface-hover);
-}
-
-/* Typography */
-.text-heading {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.text-muted {
-  color: var(--text-secondary);
-  font-size: 0.875rem;
-}
-
-/* Interactive Elements */
-.btn-primary {
-  background-color: var(--text-primary);
-  color: var(--text-inverse);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  opacity: 0.9;
-}
-
-/* Status Badges (Pills) */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem 0.625rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border: 1px solid transparent;
-}
-
-.badge-idle, 
-.badge-completed {
-  background-color: var(--sage-bg);
-  color: var(--sage-text);
-  border-color: var(--sage-border);
-}
-
-.badge-high-priority {
-  background-color: var(--terracotta-bg);
-  color: var(--terracotta-text);
-  border-color: var(--terracotta-border);
-}
-
-.badge-printing {
-  background-color: var(--ochre-bg);
-  color: var(--ochre-text);
-  border-color: var(--ochre-border);
-}
-
-.badge-offline {
-  background-color: var(--taupe-bg);
-  color: var(--taupe-text);
-  border-color: var(--taupe-border);
-}
-
-/* Data Tables */
-.table-row {
-  border-bottom: 1px solid var(--border-subtle);
-  background-color: transparent;
-}
-
-.table-row:hover {
-  background-color: var(--bg-surface-hover);
-}
-
-.table-cell-link {
-  color: var(--sage-text);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+body {
+  background-color: var(--brand-surface);
+  color: var(--brand-text);
+  font-family: var(--font-roboto), Arial, sans-serif;
 }

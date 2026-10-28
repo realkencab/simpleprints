@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+
+  /* Light Sand Mode */
+  --brand-surface: #FAF7F2;
+  --brand-header: #EFEAE1
+  --brand-card: #FFFFFF;
+  --brand-text: #1F1C18;
+  --brand-primary: #B05338;        /* Terracotta Primary */
+  --brand-primary-hover: #91422B;  /* Terracotta Hover */
+  --brand-subtle: #F8EFEA;         /* Light Terracotta Tint */
+  --brand-border: #C86D51;         /* Terracotta Border */
+  --brand-button-text: #FAF7F2;
+}
+
+.dark {
+  color-scheme: dark;
+
+  /* Espresso Dark Mode */
+  --brand-surface: #141210;
+  --brand-card: #1F1C18;
+  --brand-text: #F5F0E6;
+  --brand-primary: #E07A5F;        /* Terracotta Dark Accent */
+  --brand-primary-hover: #E88C73;
+  --brand-subtle: #35201A;
+  --brand-border: #F2A18A;
+  --brand-button-text: #141210;
+}
+
+
+
+
+@theme {
+  --font-sans: var(--font-roboto), Arial, sans-serif;
+
+  /* Tailwind v4 CSS Theme Variables */
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-header: var(--brand-header);
+  --color-brand-card: var(--brand-card);
+  --color-brand-text: var(--brand-text);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-hover: var(--brand-primary-hover);
+  --color-brand-subtle: var(--brand-subtle);
+  --color-brand-border: var(--brand-border);
+  --color-brand-btn-text: var(--brand-button-text);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: var(--brand-surface);
+  color: var(--brand-text);
+  font-family: var(--font-roboto), Arial, sans-serif;
+}
