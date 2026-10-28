@@ -9,7 +9,7 @@ export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
 
   return (
-    <div className="p-8 bg-white rounded-lg shadow-sm w-full max-w-sm border border-gray-200 text-center mt-12 md:mt-0">
+    <div className="p-8 bg-main-surface-primary rounded-lg shadow-sm w-full max-w-sm border border-gray-200 text-center mt-12 md:mt-0">
       <h1 className="text-2xl font-bold text-green-600 mb-4">
         Login Successful! 🎉
       </h1>

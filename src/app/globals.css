@@ -4,24 +4,32 @@
   /* Light Sand Mode */
   color-scheme: light;
 
-  /* Surface BG Colors */
-  --canvas-primary: #EBE3D3;
-  --surface-primary: #FAF7F2;
-  --surface-secondary: #FDFBF7;
+  /* <main> Colors */
+  --main-canvas: #EBE3D3;
+  --main-surface-primary: #FAF7F2;
+  --main-surface-secondary: #FDFBF7;
 
-  /* Surface Typography Colors */
-  --on-canvas: ;
-  --on-surface-primary: #1F1C18;
-  --on-surface-secondary: #6E665E;
-  --on-surface-emph: #B05338;
+  --on-main-canvas-main: #1F1C18;
+  --on-main-surface-primary: #1F1C18;
+  --on-main-surface-secondary: #6E665E;
+  --on-main-surface-emph: #B05338;
+
+  /* <aside> Colors */
+  
+  --aside-canvas: #1a1714;
+
+  --on-aside-surface-primary: #9f9489;
+  --on-aside-surface-secondary: #83766a;
+
+
   
   --border-subtle: ;
   --border-strong: ;
 
 
   /* Brand BG Colors */
-  --brand-primary: #B05338;
-  --brand-primary-hover: #843e2a;
+  --brand-primary: #a84325;
+  --brand-primary-hover: #86361e;
   --brand-secondary: #E1BDB3;
   --brand-secondary-hover: #d6a496;
   
@@ -101,11 +109,22 @@
   --font-sans: var(--font-roboto), Arial, sans-serif;
 
   /* Tailwind v4 CSS Theme Variables */
-  --color-surface-primary: var(--surface-secondary);
-  --color-surface-secondary: var(--surface-secondary);
-  --color-on-surface-primary: var(--on-surface-primary);
-  --color-on-surface-secondary: var(--on-surface-primary);
-  --color-on-surface-emph: var(--on-surface-emph);
+
+  --color-main-canvas: var(--main-canvas);
+  --color-main-surface-primary: var(--main-surface-primary);
+  --color-main-surface-secondary: var(--main-surface-secondary);
+  --color-on-main-canvas: var(--on-main-canvas);
+  --color-on-main-surface-primary: var(--on-main-surface-primary);
+  --color-on-main-surface-secondary: var(--on-main-surface-secondary);
+  --color-on-main-surface-emph: var(--on-main-surface-emph);
+
+  --color-aside-canvas: var(--aside-canvas);
+  --color-aside-surface-primary: var(--aside-surface-primary);
+  --color-aside-surface-secondary: var(--aside-surface-secondary);
+  --color-on-aside-canvas: var(--on-aside-canvas);
+  --color-on-aside-surface-primary: var(--on-aside-surface-primary);
+  --color-on-aside-surface-secondary: var(--on-aside-surface-secondary);
+  --color-on-aside-surface-emph: var(--on-aside-surface-emph);
 
   --color-brand-primary: var(--brand-primary);
   --color-brand-primary-hover: var(--brand-primary-hover);

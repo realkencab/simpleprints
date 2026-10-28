@@ -27,7 +27,7 @@ export default async function AdminLayout({ children }) {
       {/* MAIN WINDOW 
           (loads children, wuhich is being returned by different pages) 
       */}
-      <main className="flex-1 pt-32 md:pt-8 md:ml-64 relative flex flex-col items-center justify-center min-h-screen p-6 md:p-8">
+      <main className="bg-main-canvas flex-1 pt-32 md:pt-8 md:ml-64 relative flex flex-col items-center justify-center min-h-screen p-6 md:p-8">
         {children}          
       </main>
       

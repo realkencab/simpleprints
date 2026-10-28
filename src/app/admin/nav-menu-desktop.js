@@ -27,8 +27,8 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                 href={item.href}
                 className={`flex items-center px-4 py-2 rounded-md transition-colors text-sm font-medium ${
                   isActive
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    ? 'bg-brand-primary text-on-brand-primary'
+                    : 'text-on-aside-surface-primary hover:bg-brand-secondary hover:text-on-brand-secondary'
                 }`}
               >
                 <IconComponent className="w-5 h-5 mr-3" />
@@ -48,8 +48,8 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                 onClick={state.onToggle}
                 className={`flex items-center justify-between px-4 py-2 rounded-md transition-colors text-sm font-medium w-full ${
                   isSectionActive
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    ? 'bg-brand-primary text-on-brand-primary'
+                    : 'text-on-aside-surface-primary hover:bg-brand-secondary hover:text-on-brand-secondary'
                 }`}
               >
                 <div className="flex items-center">
@@ -78,8 +78,8 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                         href={sub.href}
                         className={`px-3 py-2 rounded-md text-sm transition-colors ${
                           isSubActive
-                            ? 'bg-brand-secondary text-on-brand-secondary font-semibold'
-                            : 'text-gray-400 hover:text-white hover:bg-gray-700'
+                            ? 'bg-brand-secondary text-on-brand-secondary'
+                            : 'text-on-aside-surface-secondary hover:bg-brand-secondary hover:text-on-brand-secondary'
                         }`}
                       >
                         {sub.label}

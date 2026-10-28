@@ -17,7 +17,7 @@ export const metadata = {
     template: 'SC: P&M - %s',
     default: 'SC: P&M'
   },
-  description: "Internal 3DB operations web portal",
+  description: "SC: &M Internal Admin Portal",
 };
 
 const roboto = Roboto({

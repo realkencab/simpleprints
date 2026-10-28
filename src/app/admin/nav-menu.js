@@ -103,7 +103,7 @@ export default function NavMenu({ printers = [], role = '' }) {
   // #endregion
 
   return (
-    <aside className="fixed top-0 left-0 z-20 w-full bg-gray-800 text-white shadow-lg md:h-screen md:w-64">
+    <aside className="fixed top-0 left-0 z-20 w-full bg-aside-canvas text-canvas-aside shadow-lg md:h-screen md:w-64">
       {/* DESKTOP SIDEBAR */}
       <div className="hidden md:block h-full">
         <DesktopNav
