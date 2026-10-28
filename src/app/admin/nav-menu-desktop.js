@@ -10,7 +10,7 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
 
   return (
     <div className="flex flex-col h-full">
-      <div className="p-6 border-b border-gray-700 flex-shrink-0">
+      <div className="p-6 border-b border-gray-700 shrink-0">
         <h2 className="text-xl font-bold text-blue-400">Simpl3 Prints</h2>
       </div>
 
