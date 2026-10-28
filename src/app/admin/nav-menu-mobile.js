@@ -21,8 +21,8 @@ export default function MobileNav({ pathname, accordionState = {}, role = {}, pr
                 href={item.href}
                 className={`px-3 py-1.5 rounded-md transition-colors text-xs font-medium ${
                   isActive
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    ? 'bg-brand-primary text-white'
+                    : 'text-gray-300 hover:bg-brand-hover hover:text-white'
                 }`}
               >
                 {item.label}
@@ -40,8 +40,8 @@ export default function MobileNav({ pathname, accordionState = {}, role = {}, pr
               onClick={state.onToggle}
               className={`flex items-center px-3 py-1.5 rounded-md transition-colors text-xs font-medium ${
                 isSectionActive
-                  ? 'bg-blue-600 text-white'
-                  : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                  ? 'bg-brand-primary text-white'
+                  : 'text-gray-300 hover:bg-brand-hover hover:text-white'
               }`}
             >
               <span>{item.label}</span>
@@ -67,7 +67,7 @@ export default function MobileNav({ pathname, accordionState = {}, role = {}, pr
             key={`mobile-sub-${item.id}`}
             className={`grid transition-all duration-300 ease-in-out bg-gray-900 ${
               state.isOpen
-                ? 'grid-rows-[1fr] opacity-100 border-t border-gray-700'
+                ? 'grid-rows-[1fr] opacity-100 border-t border-brand-border'
                 : 'grid-rows-[0fr] opacity-0 border-t-0'
             }`}
           >
@@ -81,8 +81,8 @@ export default function MobileNav({ pathname, accordionState = {}, role = {}, pr
                       href={sub.href}
                       className={`font-medium py-1 px-2.5 rounded-md transition-colors ${
                         isSubActive
-                          ? 'bg-blue-600 text-white'
-                          : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                          ? 'bg-brand-primary text-white'
+                          : 'text-gray-300 hover:text-white hover:bg-brand-card'
                       }`}
                     >
                       {sub.label}

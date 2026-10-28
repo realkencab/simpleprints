@@ -13,7 +13,7 @@
 .env.local
 credentials.json
 service-account-creds.json
-
+make-hash.js
 
 # Debug Logs
 npm-debug.log*

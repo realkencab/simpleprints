@@ -9,15 +9,15 @@ export default function PrintQueueView({printQueue = []}) {
 
   return (
 
-    <section className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+    <section className="bg-white rounded-lg shadow-sm border border-brand-border overflow-hidden">
       {/* Shows 10 latest items in Print Queue */}
       <button
         type="button"
         onClick={() => setJobsOpen(!jobsOpen)}
-        className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors border-b border-gray-200 text-left"
+        className="w-full flex items-center justify-between p-4 bg-brand-surface hover:bg-brand-subtle transition-colors border-b border-brand-border text-left"
       >
         <div className="flex items-center space-x-2">
-          <h2 className="text-lg font-bold text-gray-800">Print Queue (Temp Dummy Data)</h2>
+          <h2 className="text-lg font-bold text-brand-text">Print Queue (Temp Dummy Data)</h2>
           <span className="text-xs text-gray-500">(latest 10)</span>
         </div>
         <ChevronDownIcon
@@ -35,7 +35,7 @@ export default function PrintQueueView({printQueue = []}) {
         <div className="overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm text-gray-600">
-              <thead className="bg-gray-100 text-gray-700 uppercase text-xs font-semibold border-b border-gray-200">
+              <thead className="bg-brand-subtle text-gray-700 uppercase text-xs font-semibold border-b border-brand-border">
                 <tr>
                   <th className="px-4 py-3">Date Started</th>
                   <th className="px-4 py-3">Priority</th>
@@ -47,20 +47,20 @@ export default function PrintQueueView({printQueue = []}) {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {printQueue.map((job) => (
-                  <tr key={job.id} className="hover:bg-gray-50 transition-colors">
+                  <tr key={job.id} className="hover:bg-brand-surface transition-colors">
                     <td className="px-4 py-3 whitespace-nowrap text-gray-500 text-xs font-mono">
                       {job.dateStarted}
                     </td>
                     <td className="px-4 py-3 whitespace-nowrap">
                       <PriorityBadge priority={job.priority} />
                     </td>
-                    <td className="px-4 py-3 font-medium text-gray-900">
+                    <td className="px-4 py-3 font-medium text-brand-text">
                       {job.name}
                     </td>
                     <td className="px-4 py-3 whitespace-nowrap text-gray-700 font-medium">
                       {job.printer}
                     </td>
-                    <td className="px-4 py-3 whitespace-nowrap text-blue-600 font-medium">
+                    <td className="px-4 py-3 whitespace-nowrap text-brand-primary font-medium">
                       {job.orderId}
                     </td>
                     <td className="px-4 py-3 whitespace-nowrap">

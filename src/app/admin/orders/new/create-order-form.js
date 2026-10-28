@@ -111,19 +111,19 @@ export default function CreateOrderForm({materials = []}) {
 
   return (
     <div className="max-w-4xl mx-auto w-full pt-16 md:pt-6 px-4 pb-12">
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:p-8">
+      <div className="bg-white rounded-lg shadow-sm border border-brand-border p-6 md:p-8">
         
         {/* Page Title */}
-        <div className="border-b border-gray-200 pb-4 mb-6">
-          <h1 className="text-2xl font-bold text-gray-800">Create New Order</h1>
+        <div className="border-b border-brand-border pb-4 mb-6">
+          <h1 className="text-2xl font-bold text-brand-text">Create New Order</h1>
           <p className="text-sm text-gray-500">Enter customer information and job order details.</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           
           {/* SECTION 1: CUSTOMER INFORMATION */}
-          <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 space-y-4">
-            <h2 className="text-md font-bold text-gray-800 border-b border-gray-200 pb-2">
+          <div className="bg-brand-surface p-4 rounded-lg border border-brand-border space-y-4">
+            <h2 className="text-md font-bold text-brand-text border-b border-brand-border pb-2">
               1. Customer Information
             </h2>
             
@@ -138,7 +138,7 @@ export default function CreateOrderForm({materials = []}) {
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
                   placeholder="e.g. Juan dela Cruz"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm text-gray-900 bg-white"
+                  className="w-full px-3 py-2 border border-brand-border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm text-brand-text bg-white"
                 />
               </div>
 
@@ -152,22 +152,22 @@ export default function CreateOrderForm({materials = []}) {
                   value={customerContact}
                   onChange={(e) => setCustomerContact(e.target.value)}
                   placeholder="e.g. 09171234567 / @juandelacruz"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm text-gray-900 bg-white"
+                  className="w-full px-3 py-2 border border-brand-border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm text-brand-text bg-white"
                 />
               </div>
             </div>
           </div>
 
           {/* SECTION 2: ORDER DETAILS */}
-          <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 space-y-4">
-            <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-              <h2 className="text-md font-bold text-gray-800">
+          <div className="bg-brand-surface p-4 rounded-lg border border-brand-border space-y-4">
+            <div className="flex justify-between items-center border-b border-brand-border pb-2">
+              <h2 className="text-md font-bold text-brand-text">
                 2. Order Details
               </h2>
               <button
                 type="button"
                 onClick={handleAddItem}
-                className="flex items-center text-xs font-semibold text-blue-600 hover:text-blue-700 bg-blue-100 hover:bg-blue-200 px-3 py-1.5 rounded-md transition-colors"
+                className="flex items-center text-xs font-semibold text-brand-primary hover:text-blue-700 bg-blue-100 hover:bg-blue-200 px-3 py-1.5 rounded-md transition-colors"
               >
                 <PlusIcon className="w-4 h-4 mr-1" />
                 Add Item Row
@@ -178,7 +178,7 @@ export default function CreateOrderForm({materials = []}) {
               {items.map((item, index) => (
                 <div
                   key={item.id}
-                  className="grid grid-cols-12 gap-2 p-3 bg-white border border-gray-200 rounded-md items-center shadow-sm"
+                  className="grid grid-cols-12 gap-2 p-3 bg-white border border-brand-border rounded-md items-center shadow-sm"
                 >
                   {/* Item Name */}
                   <div className="col-span-12 md:col-span-5">
@@ -189,7 +189,7 @@ export default function CreateOrderForm({materials = []}) {
                       placeholder={`Item #${index + 1} Name`}
                       value={item.itemName}
                       onChange={(e) => handleItemChange(item.id, 'itemName', e.target.value)}
-                      className="w-full px-3 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900"
+                      className="w-full px-3 py-1.5 border border-brand-border rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-brand-text"
                     />
                   </div>
 
@@ -199,7 +199,7 @@ export default function CreateOrderForm({materials = []}) {
                     <select
                       value={item.material}
                       onChange={(e) => handleItemChange(item.id, 'material', e.target.value)}
-                      className="w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 bg-white"
+                      className="w-full px-2 py-1.5 border border-brand-border rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-brand-text bg-white"
                     >
                       {materials.map((mat) => (
                         <option key={mat.id} value={mat.name}>
@@ -217,7 +217,7 @@ export default function CreateOrderForm({materials = []}) {
                       min="1"
                       value={item.qty}
                       onChange={(e) => handleItemChange(item.id, 'qty', e.target.value)}
-                      className="w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 text-center"
+                      className="w-full px-2 py-1.5 border border-brand-border rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-brand-text text-center"
                     />
                   </div>
 
@@ -231,7 +231,7 @@ export default function CreateOrderForm({materials = []}) {
                       placeholder="₱ Price"
                       value={item.price}
                       onChange={(e) => handleItemChange(item.id, 'price', e.target.value)}
-                      className="w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 text-right"
+                      className="w-full px-2 py-1.5 border border-brand-border rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none text-brand-text text-right"
                     />
                   </div>
 
@@ -253,41 +253,41 @@ export default function CreateOrderForm({materials = []}) {
           </div>
 
           {/* SECTION 3: NOTES & TOTAL SUMMARY */}
-          <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <div className="bg-brand-surface p-4 rounded-lg border border-brand-border grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
             <div className="md:col-span-2">
-              <h2 className="text-md font-bold text-gray-800 mb-2">3. Notes</h2>
+              <h2 className="text-md font-bold text-brand-text mb-2">3. Notes</h2>
               <textarea
                 rows={3}
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="Infill %, layer height, post-processing notes, target delivery date, etc."
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm text-gray-900 bg-white"
+                className="w-full px-3 py-2 border border-brand-border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none text-sm text-brand-text bg-white"
               />
             </div>
 
-            <div className="bg-white p-4 rounded-md border border-gray-200 text-right space-y-1 shadow-sm">
+            <div className="bg-white p-4 rounded-md border border-brand-border text-right space-y-1 shadow-sm">
               <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider block">
                 Total Order Cost
               </span>
-              <div className="text-2xl font-bold text-blue-600">
+              <div className="text-2xl font-bold text-brand-primary">
                 ₱{calculateTotal().toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </div>
             </div>
           </div>
 
           {/* SUBMIT BUTTONS */}
-          <div className="flex justify-end space-x-3 border-t border-gray-200 pt-4">
+          <div className="flex justify-end space-x-3 border-t border-brand-border pt-4">
             <button
               type="button"
               onClick={() => router.push('/admin/orders/list')}
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-brand-border rounded-md hover:bg-brand-surface transition-colors"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-6 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 transition-colors"
+              className="px-6 py-2 text-sm font-medium text-white bg-brand-primary rounded-md hover:bg-brand-hover disabled:opacity-50 transition-colors"
             >
               {isSubmitting ? 'Saving Order...' : 'Create Order'}
             </button>

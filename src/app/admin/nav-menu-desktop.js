@@ -10,8 +10,8 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
 
   return (
     <div className="flex flex-col h-full">
-      <div className="p-6 border-b border-gray-700 flex-shrink-0">
-        <h2 className="text-xl font-bold text-blue-400">Simpl3 Prints</h2>
+      <div className="p-6 border-b border-brand-border flex-shrink-0">
+        <h2 className="text-xl font-bold text-brand-primary">Simpl3 Prints</h2>
       </div>
 
       <nav className="flex-1 flex flex-col p-4 gap-2 overflow-y-auto">
@@ -27,8 +27,8 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                 href={item.href}
                 className={`flex items-center px-4 py-2 rounded-md transition-colors text-sm font-medium ${
                   isActive
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    ? 'bg-brand-primary text-white'
+                    : 'text-gray-300 hover:bg-brand-hover hover:text-white'
                 }`}
               >
                 <IconComponent className="w-5 h-5 mr-3" />
@@ -48,8 +48,8 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                 onClick={state.onToggle}
                 className={`flex items-center justify-between px-4 py-2 rounded-md transition-colors text-sm font-medium w-full ${
                   isSectionActive
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    ? 'bg-brand-primary text-white'
+                    : 'text-gray-300 hover:bg-brand-hover hover:text-white'
                 }`}
               >
                 <div className="flex items-center">
@@ -78,8 +78,8 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                         href={sub.href}
                         className={`px-3 py-2 rounded-md text-sm transition-colors ${
                           isSubActive
-                            ? 'bg-gray-700 text-blue-400 font-semibold'
-                            : 'text-gray-400 hover:text-white hover:bg-gray-700'
+                            ? 'bg-brand-subtle text-brand-primary font-semibold'
+                            : 'text-gray-400 hover:text-white hover:bg-brand-hover'
                         }`}
                       >
                         {sub.label}
@@ -92,7 +92,7 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
           );
         })}
 
-        <div className="mt-auto pt-4 border-t border-gray-700">
+        <div className="mt-auto pt-4 border-t border-brand-border">
           <LogoutButton />
         </div>
       </nav>

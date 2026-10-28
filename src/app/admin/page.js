@@ -9,7 +9,7 @@ export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
 
   return (
-    <div className="p-8 bg-white rounded-lg shadow-sm w-full max-w-sm border border-gray-200 text-center mt-12 md:mt-0">
+    <div className="p-8 bg-white rounded-lg shadow-sm w-full max-w-sm border border-brand-border text-center mt-12 md:mt-0">
       <h1 className="text-2xl font-bold text-green-600 mb-4">
         Login Successful! 🎉
       </h1>
@@ -17,7 +17,7 @@ export default async function DashboardPage() {
         Welcome, <strong>{session?.user?.name}</strong>!
       </p>
       <p className="text-sm text-gray-500 mb-6">
-        Your role: <span className="font-semibold text-blue-600">{session?.user?.role || 'Undefined'}</span>
+        Your role: <span className="font-semibold text-brand-primary">{session?.user?.role || 'Undefined'}</span>
       </p>
     </div>
   );

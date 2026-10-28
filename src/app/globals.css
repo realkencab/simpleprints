@@ -3,52 +3,51 @@
 :root {
   color-scheme: light;
 
-  /* Light Sand Mode Variables (Space-separated RGB for opacity support) */
-  --brand-surface: 250 247 242;        /* #FAF7F2 */
-  --brand-card: 239 234 225;           /* #EFEAE1 */
-  --brand-text: 31 28 24;              /* #1F1C18 */
-  --brand-primary: 176 83 56;          /* #B05338 */
-  --brand-primary-hover: 145 66 43;    /* #91422B */
-  --brand-subtle: 248 239 234;         /* #F8EFEA */
-  --brand-border: 200 109 81;          /* #C86D51 */
-  --brand-button-text: 250 247 242;   /* #FAF7F2 */
+  /* Light Sand Mode */
+  --brand-surface: #FAF7F2;
+  --brand-card: #EFEAE1;
+  --brand-text: #1F1C18;
+  --brand-primary: #B05338;        /* Terracotta Primary */
+  --brand-primary-hover: #91422B;  /* Terracotta Hover */
+  --brand-subtle: #F8EFEA;         /* Light Terracotta Tint */
+  --brand-border: #C86D51;         /* Terracotta Border */
+  --brand-button-text: #FAF7F2;
 }
 
 .dark {
   color-scheme: dark;
 
-  /* Espresso Dark Mode Variables */
-  --brand-surface: 20 18 16;           /* #141210 */
-  --brand-card: 31 28 24;              /* #1F1C18 */
-  --brand-text: 245 240 230;          /* #F5F0E6 */
-  --brand-primary: 224 122 95;         /* #E07A5F */
-  --brand-primary-hover: 232 140 115;  /* #E88C73 */
-  --brand-subtle: 53 32 26;            /* #35201A */
-  --brand-border: 242 161 138;         /* #F2A18A */
-  --brand-button-text: 20 18 16;       /* #141210 */
+  /* Espresso Dark Mode */
+  --brand-surface: #141210;
+  --brand-card: #1F1C18;
+  --brand-text: #F5F0E6;
+  --brand-primary: #E07A5F;        /* Terracotta Dark Accent */
+  --brand-primary-hover: #E88C73;
+  --brand-subtle: #35201A;
+  --brand-border: #F2A18A;
+  --brand-button-text: #141210;
 }
 
 @theme {
   --font-sans: var(--font-roboto), Arial, sans-serif;
 
-  /* Register Semantic Utility Tokens for Tailwind v4 */
-  --color-brand-surface: rgb(var(--brand-surface) / <alpha-value>);
-  --color-brand-card: rgb(var(--brand-card) / <alpha-value>);
-  --color-brand-text: rgb(var(--brand-text) / <alpha-value>);
-  --color-brand-primary: rgb(var(--brand-primary) / <alpha-value>);
-  --color-brand-hover: rgb(var(--brand-primary-hover) / <alpha-value>);
-  --color-brand-subtle: rgb(var(--brand-subtle) / <alpha-value>);
-  --color-brand-border: rgb(var(--brand-border) / <alpha-value>);
-  --color-brand-btn-text: rgb(var(--brand-button-text) / <alpha-value>);
+  /* Tailwind v4 CSS Theme Variables */
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-card: var(--brand-card);
+  --color-brand-text: var(--brand-text);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-hover: var(--brand-primary-hover);
+  --color-brand-subtle: var(--brand-subtle);
+  --color-brand-border: var(--brand-border);
+  --color-brand-btn-text: var(--brand-button-text);
 }
 
-/* Maintain permanent scrollbar track to prevent width layout shifting */
 html {
   overflow-y: scroll;
 }
 
 body {
-  background-color: rgb(var(--brand-surface));
-  color: rgb(var(--brand-text));
+  background-color: var(--brand-surface);
+  color: var(--brand-text);
   font-family: var(--font-roboto), Arial, sans-serif;
 }

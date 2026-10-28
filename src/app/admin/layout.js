@@ -15,7 +15,7 @@ export default async function AdminLayout({ children }) {
 
   return (
 
-    <div className="flex flex-col md:flex-row min-h-screen bg-slate-100">
+    <div className="flex flex-col md:flex-row min-h-screen bg-brand-surface">
       
       {/* NAVBAR SIDE WINDOW
         Responsive design

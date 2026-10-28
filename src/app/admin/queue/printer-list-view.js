@@ -9,7 +9,7 @@ export default function PrinterListView({printers = []}) {
 
   return (
 
-    <section className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+    <section className="bg-white rounded-lg shadow-sm border border-brand-border overflow-hidden">
     {/*  contains cards with the following info:
     * thumbnail
     * Printer name
@@ -19,10 +19,10 @@ export default function PrinterListView({printers = []}) {
       <button
         type="button"
         onClick={() => setFleetOpen(!fleetOpen)}
-        className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors border-b border-gray-200 text-left"
+        className="w-full flex items-center justify-between p-4 bg-brand-surface hover:bg-brand-subtle transition-colors border-b border-brand-border text-left"
       >
         <div className="flex items-center space-x-2">
-          <h2 className="text-lg font-bold text-gray-800">Printers Status</h2>
+          <h2 className="text-lg font-bold text-brand-text">Printers Status</h2>
           {/* shows how many printers are in the fleet in a text bubble */}
           <span className="text-xs font-semibold px-2.5 py-0.5 bg-blue-100 text-blue-700 rounded-full">
             {printers.length} Printers
@@ -51,9 +51,9 @@ export default function PrinterListView({printers = []}) {
                 <Link
                   key={printer.id}
                   href={`/admin/queue/${printer.id}`}
-                  className="group border border-gray-200 rounded-lg p-4 hover:border-blue-500 hover:shadow-md transition-all flex flex-col items-center text-center bg-white"
+                  className="group border border-brand-border rounded-lg p-4 hover:border-blue-500 hover:shadow-md transition-all flex flex-col items-center text-center bg-white"
                 >
-                  <div className="w-full h-32 bg-gray-50 rounded-md mb-3 flex items-center justify-center overflow-hidden border border-gray-100">
+                  <div className="w-full h-32 bg-brand-surface rounded-md mb-3 flex items-center justify-center overflow-hidden border border-gray-100">
                     <img
                       src={imagePath}
                       alt={printer.model}
@@ -64,7 +64,7 @@ export default function PrinterListView({printers = []}) {
                     />
                   </div>
 
-                  <h3 className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors mb-1 text-base">
+                  <h3 className="font-bold text-brand-text group-hover:text-brand-primary transition-colors mb-1 text-base">
                     {printer.name}
                   </h3>
 
@@ -75,7 +75,7 @@ export default function PrinterListView({printers = []}) {
                           ? 'bg-amber-100 text-amber-800'
                           : printer.status === 'idle'
                           ? 'bg-emerald-100 text-emerald-800'
-                          : 'bg-gray-100 text-gray-700'
+                          : 'bg-brand-subtle text-gray-700'
                       }`}
                     >
                       {printer.status}

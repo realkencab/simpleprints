@@ -11,14 +11,14 @@ export default async function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-100 flex flex-col items-center justify-center relative">
+    <div className="min-h-screen bg-brand-surface flex flex-col items-center justify-center relative">
       
       {/* Top Right Sign Out Button Container */}
       <div className="absolute top-4 right-4">
         <LogoutButton />
       </div>
 
-      <div className="p-8 bg-white rounded-lg shadow-sm w-96 border border-gray-200 text-center">
+      <div className="p-8 bg-white rounded-lg shadow-sm w-96 border border-brand-border text-center">
         <h1 className="text-2xl font-bold text-green-600 mb-4">
           Login Successful! 🎉
         </h1>
@@ -26,7 +26,7 @@ export default async function DashboardPage() {
           Welcome, <strong>{session.user.name}</strong>!
         </p>
         <p className="text-sm text-gray-500 mb-6">
-          Your role: <span className="font-semibold text-blue-600">{session.user.role || 'Undefined'}</span>
+          Your role: <span className="font-semibold text-brand-primary">{session.user.role || 'Undefined'}</span>
         </p>
       </div>
     </div>
