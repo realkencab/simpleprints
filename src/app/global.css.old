@@ -1,0 +1,37 @@
+
+@import "tailwindcss";
+
+:root {
+  /* Default Next.js Base Variables */
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Custom Brand Presets (RGB space-separated for opacity support) 
+  --brand-primary: 37 99 235;       /* #2563eb */
+  --brand-primary-hover: 29 78 216; /* #1d4ed8 */
+  --brand-surface: 248 250 252;     /* #f8fafc */
+  --brand-card: 255 255 255;        /* #ffffff */
+  --brand-heading: 30 41 59;        /* #1e293b */
+  --brand-border: 226 232 240;      /* #e2e8f0 */
+  
+}
+
+/* Explicit class trigger for future Dark Mode toggle */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+  /* Dark Theme Overrides */
+  --brand-primary: 59 130 246;      /* #3b82f6 */
+  --brand-primary-hover: 37 99 235;
+  --brand-surface: 15 23 42;        /* #0f172a */
+  --brand-card: 30 41 59;           /* #1e293b */
+  --brand-heading: 241 245 249;     /* #f1f5f9 */
+  --brand-border: 51 65 85;         /* #334155 */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Roboto', Arial, sans-serif;
+}

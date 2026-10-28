@@ -1,0 +1,7 @@
+[
+  { "id": "pla", "name": "PLA" },
+  { "id": "petg", "name": "PETG" },
+  { "id": "abs", "name": "ABS" },
+  { "id": "tpu", "name": "TPU" },
+  { "id": "resin", "name": "Resin" }
+]

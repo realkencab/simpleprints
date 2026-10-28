@@ -1,0 +1,37 @@
+import { NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { getPrintQueue, createPrintQueueJob } from '@/data-service';
+
+// GET /api/queue
+export async function GET() {
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const queue = await getPrintQueue();
+    return NextResponse.json(queue, { status: 200 });
+  } catch (error) {
+    console.error('API GET Queue Error:', error);
+    return NextResponse.json({ error: 'Failed to fetch print queue' }, { status: 500 });
+  }
+}
+
+// POST /api/queue
+export async function POST(request) {
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const body = await request.json();
+    const savedJob = await createPrintQueueJob(body);
+    return NextResponse.json(savedJob, { status: 201 });
+  } catch (error) {
+    console.error('API POST Queue Error:', error);
+    return NextResponse.json({ error: 'Failed to create queue print job' }, { status: 500 });
+  }
+}
