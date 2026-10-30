@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
-import { getMaterials } from '@/data-service';
+import { getMaterials } from '@/lib/data-service';
 
 // GET /api/materials
 export async function GET() {

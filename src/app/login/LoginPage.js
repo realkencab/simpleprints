@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
+import { cn } from '@/utils/clsx';
 
 export const metadata = {
   title: 'Login', 
@@ -38,14 +39,21 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 flex items-center justify-center">
-      <form onSubmit={handleLogin} method="POST" className="p-8 bg-white rounded-lg shadow-sm w-96 border border-gray-200 space-y-4">
-        <h1 className="text-3xl font-bold text-on-surface-emph text-center">Simple Crafts <br />
-          <span className="text-sm font-bold text-on-surface-emph">Pr1nts & Mak3s</span>
+    <div className="min-h-screen bg-main-canvas flex items-center justify-center">
+      <form onSubmit={handleLogin} 
+        method="POST" 
+        className={cn(
+          "bg-main-card-primary",
+          "border border-lines-subtle",
+          "p-8 rounded-lg shadow-sm w-96 space-y-4"
+        )}
+      >
+        <h1 className="text-3xl font-bold text-on-main-panel-emph text-center">Simple Crafts <br />
+          <span className="text-sm font-bold text-on-panel-emph">Pr1nts & Mak3s</span>
         </h1>
         
         
-        {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+        {error && <p className="text-on-terracotta-primary text-sm text-center">{error}</p>}
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
@@ -54,7 +62,7 @@ export default function LoginPage() {
             name="username" // Required for FormData to target the field
             autoComplete="username"
             disabled={isLoading}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-terracotta-border disabled:opacity-50"
+            className="w-full px-4 py-2 border border-lines-secondary rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-terracotta-border disabled:opacity-50"
             required
           />
         </div>
@@ -66,7 +74,7 @@ export default function LoginPage() {
             name="password" // Required for FormData to target the field
             autoComplete="current-password"
             disabled={isLoading}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-terracotta-border disabled:opacity-50"
+            className="w-full px-4 py-2 border border-lines-secondary rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-terracotta-border disabled:opacity-50"
             required
           />
         </div>

@@ -1,4 +1,4 @@
-import { getPrinters,getPrintQueue } from '@/data-service';
+import { getPrinters,getPrintQueue } from '@/lib/data-service';
 import PrinterHistoryView from './printer-history-view';
 
 export const metadata = {

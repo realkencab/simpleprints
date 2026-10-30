@@ -1,7 +1,7 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route"; 
-import { getPrinters } from "@/data-service";
+import { getPrinters } from "@/lib/data-service";
 import NavMenu from "./nav-menu";
 
 export default async function AdminLayout({ children }) {

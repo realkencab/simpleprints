@@ -28,7 +28,7 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                 className={`flex items-center px-4 py-2 rounded-md transition-colors text-sm font-medium ${
                   isActive
                     ? 'bg-brand-primary text-on-brand-primary'
-                    : 'text-on-aside-surface-primary hover:bg-brand-secondary hover:text-on-brand-secondary'
+                    : 'text-on-aside-panel-primary hover:bg-brand-secondary hover:text-on-brand-secondary'
                 }`}
               >
                 <IconComponent className="w-5 h-5 mr-3" />
@@ -49,7 +49,7 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                 className={`flex items-center justify-between px-4 py-2 rounded-md transition-colors text-sm font-medium w-full ${
                   isSectionActive
                     ? 'bg-brand-primary text-on-brand-primary'
-                    : 'text-on-aside-surface-primary hover:bg-brand-secondary hover:text-on-brand-secondary'
+                    : 'text-on-aside-panel-primary hover:bg-brand-secondary hover:text-on-brand-secondary'
                 }`}
               >
                 <div className="flex items-center">
@@ -79,7 +79,7 @@ export default function DesktopNav({ pathname, accordionState = {}, role = {}, p
                         className={`px-3 py-2 rounded-md text-sm transition-colors ${
                           isSubActive
                             ? 'bg-brand-secondary text-on-brand-secondary'
-                            : 'text-on-aside-surface-secondary hover:bg-brand-secondary hover:text-on-brand-secondary'
+                            : 'text-on-aside-panel-secondary hover:bg-brand-secondary hover:text-on-brand-secondary'
                         }`}
                       >
                         {sub.label}

@@ -1,5 +1,5 @@
 
-import { getMaterials } from '@/data-service';
+import { getMaterials } from '@/lib/data-service';
 import CreateOrderForm from './create-order-form';
 
 export const metadata = {

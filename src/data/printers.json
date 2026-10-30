@@ -4,5 +4,23 @@
     "name": "Kobra X (1)", 
     "model": "Anycubic Kobra X",
     "status": "idle" 
+  },
+  { 
+    "id": "kobra-x-2", 
+    "name": "Kobra X (2)", 
+    "model": "Anycubic Kobra X",
+    "status": "idle" 
+  },
+  { 
+    "id": "kobra-x-3", 
+    "name": "Kobra X (3)", 
+    "model": "Anycubic Kobra X",
+    "status": "idle" 
+  },
+  { 
+    "id": "kobra-x-4", 
+    "name": "Kobra X (4)", 
+    "model": "Anycubic Kobra X",
+    "status": "idle" 
   }
 ]

@@ -6,6 +6,7 @@
 /.next/
 /out/
 /build
+/src/_old
 
 # Environment Variables & Secrets
 .env
@@ -30,3 +31,7 @@ Thumbs.db
 *.pid
 *.seed
 *.pid.lock
+ecosystem.config.js
+
+
+# CLI scripts

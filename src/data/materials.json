@@ -1,7 +1,47 @@
 [
-  { "id": "pla", "name": "PLA" },
-  { "id": "petg", "name": "PETG" },
-  { "id": "abs", "name": "ABS" },
-  { "id": "tpu", "name": "TPU" },
-  { "id": "resin", "name": "Resin" }
+  { 
+    "family": "pla", 
+    "model": "Polymaker Panchoma Basic",
+    "color": "Black"
+  },
+  { 
+    "family": "pla", 
+    "model": "Anycubic PLA",
+    "color": "White"
+  },
+  { 
+    "family": "pla", 
+    "model": "Anycubic PLA",
+    "color": "Beige"
+  },
+  { 
+    "family": "pla", 
+    "model": "eSUN PLA+",
+    "color": "Black"
+  },
+  { 
+    "family": "pla", 
+    "model": "Jadeway L1 PLA",
+    "color": "Transparent"
+  },
+  { 
+    "family": "PETG", 
+    "model": "Jadeway L1 Hyper PETG",
+    "color": "Sky Blue"
+  },
+  { 
+    "family": "PETG", 
+    "model": "Jadeway L1 Hyper PETG",
+    "color": "Brown"
+  },
+  { 
+    "family": "PETG", 
+    "model": "Jadeway L1 Hyper PETG",
+    "color": "Pink"
+  },
+  { 
+    "family": "PETG", 
+    "model": "SUNLU PETG",
+    "color": "Green"
+  }
 ]

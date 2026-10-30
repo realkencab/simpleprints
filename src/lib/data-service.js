@@ -3,6 +3,8 @@ import { JWT } from 'google-auth-library';
 import fs from 'fs';
 import path from 'path';
 
+import { generateJobOrderNumber } from '@/utils/order-generator';
+
 // #region CONFIGURATION 
 // Path pointing to src/data/ folder on the server's local storage
   const DATA_DIR = path.join(process.cwd(), 'src', 'data');
@@ -78,13 +80,13 @@ import path from 'path';
     const orders = await getOrders();
 
     const newOrder = {
-      orderId: `ORD-${Date.now().toString().slice(-4)}`,
+      orderNumber: generateJobOrderNumber(),
       createdAt: new Date().toISOString(),
       ...orderPayload,
     };
 
     orders.unshift(newOrder); // Add new order to top of list
-    writeJsonFile(ORDERS_PATH, orders);
+    await writeJsonFile(ORDERS_PATH, orders);
     return newOrder;
   }
 

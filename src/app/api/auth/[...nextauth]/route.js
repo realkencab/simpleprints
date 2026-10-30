@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
-import { getUserFromSheet } from "@/data-service"; // Clean alias directly to src/data-service.js
+import { getUserFromSheet } from "@/lib/data-service"; // Clean alias directly to src/data-service.js
 
 // 1. Export authOptions explicitly so other pages can import it
 export const authOptions = {

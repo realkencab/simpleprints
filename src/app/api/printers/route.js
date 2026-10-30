@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
-import { getPrinters } from '@/data-service';
+import { getPrinters } from '@/lib/data-service';
 
 // GET /api/printers
 export async function GET() {

@@ -4,32 +4,50 @@
   /* Light Sand Mode */
   color-scheme: light;
 
+  /* Line Breaks*/
+  --lines-primary: #E5E7EB;
+  --lines-secondary: #D1D5DB ;
+  --lines-subtle: #F3F4F6;
+  --lines-strong: #9CA3AF;
+
+  /* Input Text Fields Colors */
+  --main-panel-input: #faf7f2;
+  --on-main-panel-input: #1F1C18;
+
   /* <main> Colors */
-  --main-canvas: #EBE3D3;
-  --main-surface-primary: #FAF7F2;
-  --main-surface-secondary: #FDFBF7;
+  --main-canvas: #ebe3d3;                   /*  <main> bg color*/
+  --main-panel-primary: #faf7f2;            /*  section body BG color */
+  --main-panel-primary-hover: #f2eade;      /*  hover: section body BG color */
+  --main-panel-secondary: #f4efe6;          /*  section header BG Color */
+  --main-panel-secondary-hover: #decfb5;    /*  hover: section header BG color */
+  --main-card-primary: #fefdfb;             /*  card background */
+  --main-card-secondary: #f4efe6;           /*  card header background, if any */
 
   --on-main-canvas-main: #1F1C18;
-  --on-main-surface-primary: #1F1C18;
-  --on-main-surface-secondary: #6E665E;
-  --on-main-surface-emph: #B05338;
+  --on-main-panel-primary: #1F1C18;
+  --on-main-panel-secondary: #6E665E;
+  --on-main-panel-emph: #91323B;
 
   /* <aside> Colors */
   
   --aside-canvas: #1a1714;
 
-  --on-aside-surface-primary: #9f9489;
-  --on-aside-surface-secondary: #83766a;
+  --on-aside-panel-primary: #9f9489;
+  --on-aside-panel-secondary: #83766a;
 
-
+  /* */
   
-  --border-subtle: ;
-  --border-strong: ;
 
+  /*  old primary         - #a84325 
+      old primary hover   - #86361e
+      garnet              - #91323B
+      garnet hover        - #7b2a32
+
+  */
 
   /* Brand BG Colors */
-  --brand-primary: #a84325;
-  --brand-primary-hover: #86361e;
+  --brand-primary: #91323B;
+  --brand-primary-hover: #7b2a32;
   --brand-secondary: #E1BDB3;
   --brand-secondary-hover: #d6a496;
   
@@ -110,21 +128,34 @@
 
   /* Tailwind v4 CSS Theme Variables */
 
+  --color-lines-primary: var(--lines-primary);
+  --color-lines-secondary: var(--lines-secondary);
+  --color-lines-subtle: var(--lines-subtle);
+  --color-lines-strong: var(--lines-strong);
+
+  --color-main-panel-input: var(--main-panel-input);
+  --color-on-main-panel-input: var(--on-main-panel-input);
+
   --color-main-canvas: var(--main-canvas);
-  --color-main-surface-primary: var(--main-surface-primary);
-  --color-main-surface-secondary: var(--main-surface-secondary);
+  --color-main-panel-primary: var(--main-panel-primary);
+  --color-main-panel-primary-hover: var(--main-panel-primary-hover);
+  --color-main-panel-secondary: var(--main-panel-secondary);
+  --color-main-panel-secondary-hover: var(--main-panel-secondary-hover);
+  --color-main-card-primary: var(--main-card-primary);
+  --color-main-card-secondary: var(--main-card-secondary);
+
   --color-on-main-canvas: var(--on-main-canvas);
-  --color-on-main-surface-primary: var(--on-main-surface-primary);
-  --color-on-main-surface-secondary: var(--on-main-surface-secondary);
-  --color-on-main-surface-emph: var(--on-main-surface-emph);
+  --color-on-main-panel-primary: var(--on-main-panel-primary);
+  --color-on-main-panel-secondary: var(--on-main-panel-secondary);
+  --color-on-main-panel-emph: var(--on-main-panel-emph);
 
   --color-aside-canvas: var(--aside-canvas);
-  --color-aside-surface-primary: var(--aside-surface-primary);
-  --color-aside-surface-secondary: var(--aside-surface-secondary);
+  --color-aside-panel-primary: var(--aside-panel-primary);
+  --color-aside-panel-secondary: var(--aside-panel-secondary);
   --color-on-aside-canvas: var(--on-aside-canvas);
-  --color-on-aside-surface-primary: var(--on-aside-surface-primary);
-  --color-on-aside-surface-secondary: var(--on-aside-surface-secondary);
-  --color-on-aside-surface-emph: var(--on-aside-surface-emph);
+  --color-on-aside-panel-primary: var(--on-aside-panel-primary);
+  --color-on-aside-panel-secondary: var(--on-aside-panel-secondary);
+  --color-on-aside-panel-emph: var(--on-aside-panel-emph);
 
   --color-brand-primary: var(--brand-primary);
   --color-brand-primary-hover: var(--brand-primary-hover);
